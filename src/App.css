@@ -1,5 +1,29 @@
-.App {
-  text-align: center;
+main {
+  background-color: #151515;
+  position: relative;
+  /*background-image: url('./images/profile.jpeg');*/
+  background-position: 75% 0%;
+  background-size:400px 400px;
+  background-repeat: no-repeat;
+}
+
+.content-container {
+  margin-left: 10%;
+}
+
+.experience-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.projects-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+img {
+  max-width: 400px;
+  max-height: 600px;
 }
 
 .App-logo {

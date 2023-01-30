@@ -1,0 +1,26 @@
+.content {
+    color: white;
+    margin-right: 15%;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    border: none;
+}
+
+button:hover {
+    color: #4de19d;
+}
+
+hr.solid {
+    margin-top: 5px;
+    border-top: 3px solid #4de19d;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }

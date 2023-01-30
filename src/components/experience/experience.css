@@ -1,0 +1,21 @@
+.experience {
+    color: white;
+}
+
+hr.solid-div{
+    border-top: 1px solid #bbb;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.experience-container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+}
