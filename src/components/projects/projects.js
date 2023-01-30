@@ -13,30 +13,6 @@ const projectsList = [
     link_github: 'www.github.com',
     image: portfolio
   },
-  {
-    id: 1,
-    project_name: 'Portfolio',
-    technologies: ['React', 'HTML', 'CSS', 'Javascript'],
-    link: 'www.hola.com',
-    link_github: 'www.github.com',
-    image: portfolio
-  },
-  {
-    id: 1,
-    project_name: 'Portfolio',
-    technologies: ['React', 'HTML', 'CSS', 'Javascript'],
-    link: 'www.hola.com',
-    link_github: 'www.github.com',
-    image: portfolio
-  },
-  {
-    id: 1,
-    project_name: 'Portfolio',
-    technologies: ['React', 'HTML', 'CSS', 'Javascript'],
-    link: 'www.hola.com',
-    link_github: 'www.github.com',
-    image: portfolio
-  }
 ]
 
 const Projects = () => (

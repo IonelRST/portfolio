@@ -1,0 +1,26 @@
+.work {
+    color: white;
+}
+
+.company-label {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.time-label {
+    margin-top: auto;
+}
+
+.technologies-label {
+    justify-content: end;
+    display: flex;
+    list-style-type: none;
+}
+
+.works-container {
+    margin: 24px auto;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #bbb;;
+}

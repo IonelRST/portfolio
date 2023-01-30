@@ -1,4 +1,5 @@
 .header {
+  z-index: 1;
   margin: auto 15% auto 5%;
   position: sticky;
   height: 100px;
