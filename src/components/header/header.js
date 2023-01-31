@@ -7,20 +7,20 @@ const socials = [
   {
     id: 1,
     icon: <FaGithub />,
-    link: '#0',
-    ref: 'www.github.com'
+    link: 'https://github.com/IonelRST',
+    ref: 'github.com/IonelRST'
   },
   {
     id: 2,
     icon: <FaLinkedinIn />,
-    link: '#1',
-    ref: 'www.linkedin.com'
+    link: 'https://www.linkedin.com/in/ionelfm/',
+    ref: 'linkedin.com/in/ionelfm'
   },
   {
     id: 3,
     icon: <FaWhatsapp />,
-    link: '#2',
-    ref: 'www.whatsapp.com'
+    link: 'https://wa.me/+4591620774',
+    ref: '+45 91 62 07 74'
   }
 ]
 
