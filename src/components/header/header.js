@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
 import './header.css'
+import useWindowsSize from '../../utils/utils'
 
 const socials = [
   {
@@ -25,7 +26,7 @@ const socials = [
 
 const Header = () => (
   <div className='header'>
-    <h1>ionel_fuioaga</h1>
+    <h1>&lt;IonelFuioaga /&gt;</h1>
     <div className='socialIconLabel'>
       {socials.map((social, id) => (
         <SocialIcon social={social} key={id} />
@@ -41,12 +42,15 @@ Header.defaultProps = {}
 export default Header
 
 const SocialIcon = props => {
+
+  const size = useWindowsSize();
+
   const { icon, link, ref } = props.social
   return (
     <li>
       <a href={link}>
         <div className='socialIcon'>{icon}</div>
-        <div className='socialLabel'>{ref}</div>
+        {size.width > 1024 && <div className='socialLabel'>{ref}</div>}
       </a>
     </li>
   )

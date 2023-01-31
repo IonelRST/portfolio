@@ -21,9 +21,15 @@
 .project-container {
     background-color: #e0e0e0;
     border-radius: 5px;
-    width: fit-content;
+    width: 400px;
+    height: 300px;
     padding: 12px;
     margin: 12px auto;
+}
+
+img.project-image {
+    max-width: 400px;
+    object-fit: fill;
 }
 
 @media (min-width: 800px) {
@@ -32,6 +38,7 @@
         grid-template-columns: auto;
         grid-gap: 10px;
     }
+    
 }
 
 @media (min-width: 1000px) {

@@ -30,6 +30,13 @@ h1 {
   margin-bottom: auto;
 }
 
+@media (max-width: 1024px) {
+  .socialLabel {
+    content: none;
+    width: 0;
+  }
+}
+
 a {
   color: white;  
   text-decoration: none;  

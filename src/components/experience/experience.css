@@ -11,7 +11,6 @@ hr.solid-div{
 
 .experience-container {
     border-radius: 5px;
-    padding: 20px;
 }
 
 .technology-grid {
@@ -20,8 +19,12 @@ hr.solid-div{
     grid-gap: 10px;
 }
 
-img {
-    max-width: 400px;
-    max-height: 600px;
-  }
+@media (max-width: 1024px) {
+    .technology-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+    }
+}
+
   
