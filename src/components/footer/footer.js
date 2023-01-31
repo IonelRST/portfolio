@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import './footer.css'
 import Header from '../header/header'
 

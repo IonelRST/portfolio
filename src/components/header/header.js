@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
-import PropTypes from 'prop-types'
 import './header.css'
 
 const socials = [

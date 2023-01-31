@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './projects.css'
 import portfolio from '../../images/react-portfolio.png'
 import { FaGithub } from 'react-icons/fa'
