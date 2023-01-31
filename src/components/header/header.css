@@ -35,6 +35,19 @@ h1 {
     content: none;
     width: 0;
   }
+
+  .socialIconLabel {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    list-style-type: none;
+  }
+
+  .socialIcon {
+    margin-top: 6px;  
+    margin-right: 6px;
+    color: white;
+  }
 }
 
 a {
