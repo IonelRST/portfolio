@@ -1,18 +1,27 @@
 import React from 'react'
 import './projects.css'
 import portfolio from '../../images/react-portfolio.png'
-import { FaGithub } from 'react-icons/fa';
-import handleClickScroll from '../../utils/scrollToContact';
+import tictactoe from '../../images/tictactoe-project.png'
+import { FaGithub } from 'react-icons/fa'
+import handleClickScroll from '../../utils/scrollToContact'
 
 const projectsList = [
   {
     id: 1,
     project_name: 'Portfolio',
     technologies: ['React', 'HTML', 'CSS', 'Javascript'],
-    link: 'www.hola.com',
+    link: null,
     link_github: 'https://github.com/IonelRST/portfolio',
     image: portfolio
   },
+  {
+    id: 2,
+    project_name: 'Tic tac toe',
+    technologies: ['React', 'HTML', 'CSS', 'Javascript'],
+    link: 'https://ionelrst.github.io/tic-tac-toe/',
+    link_github: 'https://github.com/IonelRST/tic-tac-toe',
+    image: tictactoe
+  }
 ]
 
 const Projects = () => (
@@ -38,7 +47,7 @@ Projects.defaultProps = {}
 export default Projects
 
 const ProjectsItems = props => {
-  const { project_name, technologies, link_github, image } = props.project
+  const { project_name, technologies, link, link_github, image } = props.project
   return (
     <div className='project-container'>
       <div className='title'>
@@ -49,7 +58,14 @@ const ProjectsItems = props => {
           </div>
         </a>
       </div>
-      <img className='project-image' src={image} alt={project_name}></img>
+      {link !== null ? (
+        <a href={link}>
+          <img className='project-image' src={image} alt={project_name}></img>
+        </a>
+      ) : (
+        <img className='project-image' src={image} alt={project_name}></img>
+      )}
+
       <ul className='used-technologies'>
         {technologies.map(technology => (
           <li className='technology-label'>{technology}</li>
