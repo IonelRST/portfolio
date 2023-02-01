@@ -1,7 +1,8 @@
 import React from 'react'
 import './projects.css'
 import portfolio from '../../images/react-portfolio.png'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa';
+import handleClickScroll from '../../utils/scrollToContact';
 
 const projectsList = [
   {
@@ -9,7 +10,7 @@ const projectsList = [
     project_name: 'Portfolio',
     technologies: ['React', 'HTML', 'CSS', 'Javascript'],
     link: 'www.hola.com',
-    link_github: 'www.github.com',
+    link_github: 'https://github.com/IonelRST/portfolio',
     image: portfolio
   },
 ]
@@ -18,7 +19,7 @@ const Projects = () => (
   <div className='projects'>
     <div className='title'>
       <h1>Projects</h1>
-      <button onClick={''}>
+      <button onClick={handleClickScroll}>
         CONTACT ME <hr className='solid'></hr>
       </button>
     </div>
@@ -37,16 +38,15 @@ Projects.defaultProps = {}
 export default Projects
 
 const ProjectsItems = props => {
-  const { project_name, technologies, link, link_github, image } = props.project
+  const { project_name, technologies, link_github, image } = props.project
   return (
     <div className='project-container'>
       <div className='title'>
         <h3 className='project-title'>{project_name}</h3>
-        <a className='social-label' href={link}>
+        <a className='social-label' href={link_github}>
           <div className='social-icon'>
             <FaGithub />
           </div>
-          {link_github}
         </a>
       </div>
       <img className='project-image' src={image} alt={project_name}></img>

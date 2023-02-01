@@ -1,8 +1,10 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
 import './content.css'
+import handleClickScroll from '../../utils/scrollToContact'
 
-const Content = () => (
+const Content = () => {
+  return (
   <div className='content'>
     <div>
       <h1>
@@ -28,12 +30,13 @@ const Content = () => (
         features, I have used WebRTC, Sockects, Firebase Messaging, Google Maps
         API, Firebase Analytics, Pixel from Meta.
       </p>
-      <button onClick={''}>
+      <button onClick={handleClickScroll}>
         CONTACT ME <hr className='solid'></hr>
       </button>
     </div>
   </div>
-)
+  );
+        }
 
 Content.propTypes = {}
 

@@ -1,29 +1,61 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import './footer.css'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Header from '../header/header'
 
-const FORM_ENDPOINT = '' // TODO - fill on the later step
-
 const Footer = () => {
-  const [submitted, setSubmitted] = useState(false)
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true)
-    }, 100)
-  }
+  const form = useRef()
 
-  if (submitted) {
-    return (
-      <>
-        <div className='text-2xl'>Thank you!</div>
-        <div className='text-md'>We'll be in touch soon.</div>
-      </>
-    )
+  const sendEmail = e => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        'service_5a1y2i4',
+        'template_7kdtidc',
+        form.current,
+        '-1L9UpGEjRHdQmrzR'
+      )
+      .then(
+        result => {
+          document.getElementById('contact-form').reset()
+          toast.success('Message send successfully!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
   }
 
   return (
-    <div>
+    <div id='footer-form'>
       <div className='footer'>
+        <ToastContainer
+          position='top-right'
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='light'
+        />
+        {/* Same as */}
+        <ToastContainer />
         <div className='footer-row'>
           <div className='footer-description'>
             <h1>Contact</h1>
@@ -35,22 +67,22 @@ const Footer = () => {
           </div>
           <div className='footer-form'>
             <form
-              action={FORM_ENDPOINT}
-              onSubmit={handleSubmit}
-              method='POST'
+              id='contact-form'
+              onSubmit={sendEmail}
+              ref={form}
               target='_blank'
             >
               <input
                 type='text'
                 placeholder='NAME'
-                name='name'
+                name='user_name'
                 className='input-name'
                 required
               ></input>
               <input
                 type='email'
                 placeholder='EMAIL'
-                name='email'
+                name='user_email'
                 className='input-email'
                 required
               ></input>
